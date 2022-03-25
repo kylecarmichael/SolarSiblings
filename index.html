@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Solar Siblings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&family=Roboto:wght@300&family=Staatliches&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" media="screen">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="img/stars-bg.jpg" alt="Scattering of stars to add decoration." class="hero-img">
+            <div class="nav-bar">
+                <h1>
+                    Solar Siblings
+                </h1>
+                <nav>
+                    <ul>
+                        <!-- // Old li before dropdown refactor
+                            <li><a href="index.html" class="active">Home</a></li> 
+                        -->
+
+                        <div class="dropdown">
+                            <li class="drop-btn"><a href="index.html" class="active">Home</a></li>
+                            <div class="dropdown-content">
+                                <a href="#earth">Earth</a>
+                                <a href="#moon">Moon</a>
+                                <a href="#security">Security</a>
+                            </div>
+                        </div>
+
+                        <li><a href="inner.html">Inner</a></li>
+                        <li><a href="outer.html">Outer</a></li>
+                        <li><a href="galactic.html">Galactic</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="earth">
+                <h2>
+                    Earth
+                </h2>
+                <div class="container">
+                    <img src="img/earth.jpg"
+                        alt="The Earth as seen from the International Space Station in a Low Earth Orbit">
+                    <div class="text-container">
+                        <h3>Fast Facts</h3>
+                        <p>The 3rd planet from the sun. Located 91.5 million miles from the sun, also known as 1 AU
+                            &#40;Astronomical Unit&#41;. Day length is 24 hours while the year length is 365 days. The
+                            Earth has one moon. The only planet confirmed to support life in the known universe.</p>
+
+                        <h3>Naming</h3>
+                        <p>Also known as Gaia, Terra, Tellus, the world, and the globe. The name Earth may have roots as
+                            a personified goddess in Germanic paganism. The word is commonly written in lowercase as it
+                            was in early Middle English. Occasionally, the name Terra is used in scientific writing and
+                            science fiction to distinguish humanity's inhabited planet from others.</p>
+
+                        <h3>Unique Features</h3>
+                        <h4>Geology</h4>
+                        <p>Earth has plate tectonics, volcanism, ice, vast surface oceans, mountains, rivers, forests,
+                            deserts, and more. Plate tectonics form new crust and cycle older crust into the mantle to
+                            continually refresh the surface when paired with erosion.</p>
+
+                        <h4>Atmosphere</h4>
+                        <p>The air is composed of about 70 percent nitrogen, 21 percent oxygen, 1 percent argon, and a
+                            mix of trace gases such as carbon dioxide. Earth maintains temperatures and pressure to
+                            accommodate liquid water on the surface, which in turn provides water vapor to maintain and
+                            regulate global temperatures.</p>
+
+                        <h3 id="moon">Moons</h3>
+                        <p>
+                            The Earth has one moon that is known by names such as Luna, Selene, and Cynthia. It orbits
+                            384,000km &#40;238,900mi&#41; from Earth and has a surface gravity that is about one-sixth
+                            that of Earth's.
+                        </p>
+                        <div class="calc-container">
+                            <h4>Weight Calculator</h4>
+                            <p>Enter your weight below in either imperial or metric units and find out what your weight
+                                on the lunar surface would become! Or select a different body in our solar system.</p>
+
+
+                            <form onsubmit="return false">
+                                <!-- The lunar weight calculator function is in the script.js file -->
+                                <label for="weight">Enter weight: </label>
+                                <input type="number" name="weight" id="user-weight" required>
+
+                                <!-- Radio button for the user to choose their prefered units -->
+                                <input type="radio" name="unit" id="kg">
+                                <label for="kg">kg</label>
+                                <input type="radio" name="unit" id="lbs">
+                                <label for="lbs">lbs</label>
+                                
+                                <select name="body-list" id="body-list">
+                                    <option value="mercury">Mercury</option>
+                                    <option value="venus">Venus</option>
+                                    <option value="moon" selected>Moon</option>
+                                    <option value="mars">Mars</option>
+                                    <option value="jupiter">Jupiter</option>
+                                    <option value="saturn">Saturn</option>
+                                    <option value="uranus">Uranus</option>
+                                    <option value="neptune">Neptune</option>
+                                    <option value="pluto">Pluto</option>
+                                </select>
+                                <br>
+                                <button id="calc-btn">Calculate</button>
+                               
+                                <p id="lunar-weight"></p>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="security">
+                <h2>Security</h2>
+                <div class="container">
+                    <img src="img/earth-night.jpg" alt="A photo by NASA taken in LEO of the Earth at night with cities lit up on the surface">
+                    <div class="text-container">
+                        <h3>Web Security</h3>
+                        <p>
+                            Web security is an integral part of staying safe on the web. Balancing functionality and privacy should be a primary concern for web security. Data about your browser could be helpful for applications wanting to provide you with a better experience, but that same data could be used against you. For instance, targeting users who have a particular version of a browser could be used to exploit them for know issues in out-of-date applications. Exploitation from one point could bring an entire host of problems to a user, everything from someone impersonating you, deleting data with your privileges, to stealing your data and holding it for ransom. Web security is also crucial for developers and companies. Denial-of-Service attacks are a common way to affect websites and negatively impact the brand's reputation. 
+                        </p>
+
+                        <h3>About You</h3>
+                        <p>
+                            See what this page knows about you. <br>
+                            <button id="find-out-btn" onclick="security()">Find Out</button> <br>
+                            <span id="platform"></span><br>
+                            <span id="geolocation"></span>
+                            <span id="app-name"></span>
+                            <span id="app-version"></span>
+                            <span id="pixel-depth"></span>
+                            <span id="color-depth"></span>
+                        </p>
+
+                        <h3>Further Reading</h3>
+                        <p>
+                            <a href="https://www.goodfirms.co/glossary/web-security/">This Goodfirms article </a>
+                            is a quick overview of the importance of web security, including the many different kinds of threats to users if security is not addressed.
+                        </p>
+                        <p>
+                            <a href="https://www.cloudflare.com/learning/security/what-is-web-application-security/">This Cloudflare article </a>focuses on the ways to mitigate vulnerabilities on the web with firewalls or DNS security.
+                        </p>
+                        <p>
+                            An interactable <a href="https://www.hacksplaining.com/exercises/sql-injection#/">SQL Injection by hacksplaining</a> demonstrates the ways that websites can be vulnerable to injection.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <small>&copy; Kyle Carmichael 2022</small>
+        </footer>
+    </div>
+    <script src="modernizr.custom.05819.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
