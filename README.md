@@ -8,3 +8,9 @@ The bulk of this work was done to the Home page and the Weight Calculator
 
 ## Weekly Assignments
 
+1. Intro to JS: Create a site with at least four pages and a navigation system
+2. Functions, Data types, and Operators: Create a script that preforms some mathematical function
+3. Arrays and Flow: Incorporate if, if/else, and/or else if statements and an event listener
+4. Error Handling: Exception handling for form input
+5. DOM: Create a page that educates users about browser security by showing what info is decernable 
+6. Validating Forms: Program validation of all fields and give feedback for validation failure
